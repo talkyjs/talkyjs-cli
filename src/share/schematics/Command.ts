@@ -24,7 +24,7 @@ export abstract class CommandWithSchematics extends Command  {
       dryRun === true ? "--dry-run=true": '',
     ]
     if (options) args.push(...options)
-    if (!debug) this.log("npx @angular-devkit/schematics-cli ", ...args)
+    if (debug) this.log("npx @angular-devkit/schematics-cli ", ...args)
     await main({
       args
     })
