@@ -9,7 +9,96 @@
 [![License](https://img.shields.io/npm/l/@talkyjs/cli.svg)](https://github.com/ask-utils/talkyjs-cli/ask-utils/talkyjs-cli/blob/master/package.json)
 
 <!-- toc -->
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
 # Usage
 <!-- usage -->
+```sh-session
+$ npm install -g @talkyjs/cli
+$ talky COMMAND
+running command...
+$ talky (-v|--version|version)
+@talkyjs/cli/0.0.0 darwin-x64 node-v12.9.1
+$ talky --help [COMMAND]
+USAGE
+  $ talky COMMAND
+...
+```
+<!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`talky generate [FILE]`](#talky-generate-file)
+* [`talky hello [FILE]`](#talky-hello-file)
+* [`talky help [COMMAND]`](#talky-help-command)
+* [`talky setup [FILE]`](#talky-setup-file)
+
+## `talky generate [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ talky generate [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/generate.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.0.0/src/commands/generate.ts)_
+
+## `talky hello [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ talky hello [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+
+EXAMPLE
+  $ talky hello
+  hello world from ./src/hello.ts!
+```
+
+_See code: [src/commands/hello.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.0.0/src/commands/hello.ts)_
+
+## `talky help [COMMAND]`
+
+display help for talky
+
+```
+USAGE
+  $ talky help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
+
+## `talky setup [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ talky setup [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/setup.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.0.0/src/commands/setup.ts)_
+<!-- commandsstop -->
