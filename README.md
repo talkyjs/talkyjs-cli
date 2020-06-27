@@ -17,7 +17,7 @@ $ npm install -g @talkyjs/cli
 $ talky COMMAND
 running command...
 $ talky (-v|--version|version)
-@talkyjs/cli/0.1.0 darwin-x64 node-v12.9.1
+@talkyjs/cli/0.1.1 darwin-x64 node-v12.9.1
 $ talky --help [COMMAND]
 USAGE
   $ talky COMMAND
@@ -56,7 +56,7 @@ ALIASES
   $ talky gen
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.1.0/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.1.1/src/commands/generate.ts)_
 
 ## `talky help [COMMAND]`
 
@@ -93,7 +93,7 @@ OPTIONS
   -h, --help                         show CLI help
 ```
 
-_See code: [src/commands/new.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.1.0/src/commands/new.ts)_
+_See code: [src/commands/new.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.1.1/src/commands/new.ts)_
 
 ## `talky setup`
 
@@ -110,5 +110,5 @@ OPTIONS
   -s, --ssml=(default|tsx)  [default: tsx] ssml markup style
 ```
 
-_See code: [src/commands/setup.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.1.0/src/commands/setup.ts)_
+_See code: [src/commands/setup.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.1.1/src/commands/setup.ts)_
 <!-- commandsstop -->
