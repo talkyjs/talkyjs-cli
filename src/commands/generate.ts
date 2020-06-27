@@ -2,6 +2,21 @@ import {Command, flags} from '@oclif/command'
 import {args} from '@oclif/parser';
 import { CommandWithSchematics } from '../share/schematics/Command';
 
+/**
+
+# Setup Skill handler
+% yarn schematics .:init --path=./tmp --dry-run=false --ssml=tsx --database=none
+
+# Add a ask-sdk request handler
+% yarn schematics .:handler --path=./tmp --dry-run=false --ssml=tsx
+
+# Add ask-utils router (Dry run)
+% yarn schematics .:router --path=./tmp/src
+
+# Add service class
+% yarn schematics .:service --path=./tmp/src --name=test --dry-run=false --test=true
+ */
+
 export default class Generate extends CommandWithSchematics {
   static description = '[g, gen, generate] Generate files'
   static aliases = [
@@ -36,7 +51,7 @@ export default class Generate extends CommandWithSchematics {
   static args: args.Input = [{
     name: 'type',
     description: "Generate file type",
-    options: ["handler"],
+    options: ["handler", 'router', 'service'],
     required: true,
   }]
 

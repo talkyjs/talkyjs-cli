@@ -28,46 +28,35 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`talky generate [FILE]`](#talky-generate-file)
-* [`talky hello [FILE]`](#talky-hello-file)
+* [`talky generate TYPE`](#talky-generate-type)
 * [`talky help [COMMAND]`](#talky-help-command)
-* [`talky setup [FILE]`](#talky-setup-file)
+* [`talky new [FILE]`](#talky-new-file)
+* [`talky setup`](#talky-setup)
 
-## `talky generate [FILE]`
+## `talky generate TYPE`
 
-describe the command here
+[g, gen, generate] Generate files
 
 ```
 USAGE
-  $ talky generate [FILE]
+  $ talky generate TYPE
+
+ARGUMENTS
+  TYPE  (handler|router|service) Generate file type
 
 OPTIONS
-  -f, --force
+  -D, --dry-run
+  -d, --debug
   -h, --help       show CLI help
-  -n, --name=name  name to print
+  -n, --name=name  name of the generated file
+  -p, --path=path  [default: ./] generate file path
+
+ALIASES
+  $ talky g
+  $ talky gen
 ```
 
 _See code: [src/commands/generate.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.0.0/src/commands/generate.ts)_
-
-## `talky hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ talky hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ talky hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.0.0/src/commands/hello.ts)_
 
 ## `talky help [COMMAND]`
 
@@ -86,18 +75,35 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
 
-## `talky setup [FILE]`
+## `talky new [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ talky setup [FILE]
+  $ talky new [FILE]
 
 OPTIONS
   -f, --force
   -h, --help       show CLI help
   -n, --name=name  name to print
+```
+
+_See code: [src/commands/new.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.0.0/src/commands/new.ts)_
+
+## `talky setup`
+
+Setup project (update package.json / tsconfig.json)
+
+```
+USAGE
+  $ talky setup
+
+OPTIONS
+  -D, --dry-run
+  -d, --debug
+  -h, --help                show CLI help
+  -s, --ssml=(default|tsx)  [default: tsx] ssml markup style
 ```
 
 _See code: [src/commands/setup.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.0.0/src/commands/setup.ts)_

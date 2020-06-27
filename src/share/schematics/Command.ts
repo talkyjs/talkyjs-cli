@@ -4,7 +4,7 @@ import {
   main
 } from "@angular-devkit/schematics-cli/bin/schematics"
 
-export type SchematicsCommand = "setup" | "handler"
+export type SchematicsCommand = "setup" | "handler" | 'init' | 'service' | 'router'
 export abstract class CommandWithSchematics extends Command  {
   private readonly collectionName = '@talkyjs/schematics'
   public async executeSchematics(command: SchematicsCommand, {
