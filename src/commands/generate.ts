@@ -19,6 +19,16 @@ import { CommandWithSchematics } from '../share/schematics/Command';
 
 export default class Generate extends CommandWithSchematics {
   static description = '[g, gen, generate] Generate files'
+  static examples = [
+    "Create ask-sdk RequestHandler\n $ talky g handler --ssml default\n",
+    "With TSX \n $ talky g handler --ssml tsx\n",
+    "Specific directory \n $ talky g handler --ssml tsx -P ./src\n",
+    "Create ask-utils RequestRouter\n $ talky g router --ssml default\n",
+    "With TSX \n $ talky g router --ssml tsx\n",
+    "Create service class \n $ talky g service\n",
+    "No test \n $ talky g service --no-test\n",
+  ]
+
   static aliases = [
     'g',
     'gen'

@@ -6,6 +6,11 @@ import { CommandWithSchematics } from '../share/schematics/Command'
  */
 export default class New extends CommandWithSchematics {
   static description = 'Create a new Alexa app'
+  static examples = [
+    "For ask-sdk user\n $ talky new -C handler -S default\n",
+    "With S3 adapter\n $ talky new -B s3\n",
+    "Without test code\n $ talky new --no-test\n",
+  ]
 
   static flags = {
     help: flags.help({char: 'h'}),
@@ -31,6 +36,12 @@ export default class New extends CommandWithSchematics {
       description: 'Ignore default test code',
       char: 'T'
     }),
+    controller: flags.enum({
+      description: 'Request handler object type',
+      char: 'C',
+      options: ['handler', 'router'],
+      default: 'router'
+    }),
     debug: flags.boolean({
       char: 'd',
       default: false
@@ -50,6 +61,7 @@ export default class New extends CommandWithSchematics {
     if (flags.database) options.push(`--database=${flags.database}`)
     if (flags.ssml) options.push(`--ssml=${flags.ssml}`)
     if (flags["no-test"] === true) options.push(`--test=false`)
+    if (flags.controller) options.push(`--controller-type=${flags.controller}`)
     this.executeSchematics('init', {
       dryRun: flags["dry-run"],
       debug: flags.debug,
