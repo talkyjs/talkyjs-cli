@@ -17,7 +17,7 @@ $ npm install -g @talkyjs/cli
 $ talky COMMAND
 running command...
 $ talky (-v|--version|version)
-@talkyjs/cli/0.1.1 darwin-x64 node-v12.9.1
+@talkyjs/cli/0.2.0 darwin-x64 node-v12.9.1
 $ talky --help [COMMAND]
 USAGE
   $ talky COMMAND
@@ -29,7 +29,6 @@ USAGE
 * [`talky generate TYPE NAME`](#talky-generate-type-name)
 * [`talky help [COMMAND]`](#talky-help-command)
 * [`talky new`](#talky-new)
-* [`talky setup`](#talky-setup)
 
 ## `talky generate TYPE NAME`
 
@@ -54,9 +53,31 @@ OPTIONS
 ALIASES
   $ talky g
   $ talky gen
+
+EXAMPLES
+  Create ask-sdk RequestHandler
+    $ talky g handler --ssml default
+
+  With TSX 
+    $ talky g handler --ssml tsx
+
+  Specific directory 
+    $ talky g handler --ssml tsx -P ./src
+
+  Create ask-utils RequestRouter
+    $ talky g router --ssml default
+
+  With TSX 
+    $ talky g router --ssml tsx
+
+  Create service class 
+    $ talky g service
+
+  No test 
+    $ talky g service --no-test
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.1.1/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.2.0/src/commands/generate.ts)_
 
 ## `talky help [COMMAND]`
 
@@ -85,30 +106,24 @@ USAGE
 
 OPTIONS
   -B, --database=(none|s3|dynamodb)  [default: none] Skill database type
+  -C, --controller=(handler|router)  [default: router] Request handler object type
   -D, --dry-run
   -P, --path=path                    [default: ./] target path
   -S, --ssml=(tsx|default)           [default: tsx] SSML markup type
   -T, --no-test                      Ignore default test code
   -d, --debug
   -h, --help                         show CLI help
+
+EXAMPLES
+  For ask-sdk user
+    $ talky new -C handler -S default
+
+  With S3 adapter
+    $ talky new -B s3
+
+  Without test code
+    $ talky new --no-test
 ```
 
-_See code: [src/commands/new.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.1.1/src/commands/new.ts)_
-
-## `talky setup`
-
-Setup project (update package.json / tsconfig.json)
-
-```
-USAGE
-  $ talky setup
-
-OPTIONS
-  -D, --dry-run
-  -d, --debug
-  -h, --help                show CLI help
-  -s, --ssml=(default|tsx)  [default: tsx] ssml markup style
-```
-
-_See code: [src/commands/setup.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.1.1/src/commands/setup.ts)_
+_See code: [src/commands/new.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.2.0/src/commands/new.ts)_
 <!-- commandsstop -->
