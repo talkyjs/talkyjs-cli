@@ -26,15 +26,20 @@ export default class Generate extends CommandWithSchematics {
 
   static flags = {
     help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({
-      char: 'n',
-      description: "name of the generated file"
-    }),
     path: flags.string({
-      char: 'p',
+      char: 'P',
       description: 'generate file path',
-      default: './'
+      default: './src'
+    }),
+    ssml: flags.enum({
+      options: ['tsx', 'default'],
+      description: 'SSML markup type',
+      char: 'S'
+    }),
+    "no-test": flags.boolean({
+      default: false,
+      description: 'Ignore default test code',
+      char: 'T'
     }),
     // flag with no value (-f, --force)
     // force: flags.boolean({char: 'f'}),
@@ -53,13 +58,19 @@ export default class Generate extends CommandWithSchematics {
     description: "Generate file type",
     options: ["handler", 'router', 'service'],
     required: true,
+  }, {
+    name: 'name',
+    description: 'Generate files name',
+    required: true
   }]
 
   async run() {
     const {args, flags} = this.parse(Generate)
     const options: string[] = []
-    if (flags.name) options.push(`--name=${flags.name}`)
+    options.push(`--name=${args.name}`)
     if (flags.path) options.push(`--path=${flags.path}`)
+    if (flags.ssml) options.push(`--ssml=${flags.ssml}`)
+    if (flags["no-test"] === true) options.push(`--test=false`)
     this.executeSchematics(args.type, {
       dryRun: flags["dry-run"],
       debug: flags.debug,

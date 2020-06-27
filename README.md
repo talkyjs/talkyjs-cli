@@ -1,8 +1,6 @@
 @talkyjs/cli
 ============
 
-
-
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/@talkyjs/cli.svg)](https://npmjs.org/package/@talkyjs/cli)
 [![Downloads/week](https://img.shields.io/npm/dw/@talkyjs/cli.svg)](https://npmjs.org/package/@talkyjs/cli)
@@ -28,10 +26,65 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`talky new [FILE]`](#talky-new-file)
 * [`talky generate TYPE`](#talky-generate-type)
 * [`talky help [COMMAND]`](#talky-help-command)
-* [`talky new [FILE]`](#talky-new-file)
-* [`talky setup`](#talky-setup)
+
+## `talky new [FILE]`
+
+Create a new Alexa app
+
+```
+USAGE
+  $ talky new
+
+OPTIONS
+  -B, --database=(none|s3|dynamodb)  [default: none] Skill database type
+  -D, --dry-run
+  -P, --path=path                    [default: ./] target path
+  -S, --ssml=(tsx|default)           [default: tsx] SSML markup type
+  -T, --no-test                      Ignore default test code
+  -d, --debug
+  -h, --help                         show CLI help
+```
+
+### Created files by default
+
+```bash
+% tree -I node_modules 
+.
+├── README.md
+├── package-lock.json
+├── package.json
+├── src
+│   ├── HelpIntent
+│   │   ├── HelpIntent.router.ts
+│   │   ├── HelpIntent.speech.tsx
+│   │   └── tests
+│   │       ├── HelpIntent.router.spec.ts
+│   │       └── HelpIntent.speech.spec.tsx
+│   ├── LaunchRequest
+│   │   ├── LaunchRequest.router.ts
+│   │   ├── LaunchRequest.speech.tsx
+│   │   └── tests
+│   │       ├── LaunchRequest.router.spec.ts
+│   │       └── LaunchRequest.speech.spec.tsx
+│   ├── StopAndCancelAndNoIntent
+│   │   ├── StopAndCancelAndNoIntent.router.ts
+│   │   ├── StopAndCancelAndNoIntent.speech.tsx
+│   │   └── tests
+│   │       ├── StopAndCancelAndNoIntent.router.spec.ts
+│   │       └── StopAndCancelAndNoIntent.speech.spec.tsx
+│   ├── index.ts
+│   └── tests
+│       └── index.spec.ts
+├── tsconfig.json
+└── webpack.config.ts
+
+8 directories, 19 files
+```
+
+_See code: [src/commands/new.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.0.0/src/commands/new.ts)_
 
 ## `talky generate TYPE`
 
@@ -39,17 +92,19 @@ USAGE
 
 ```
 USAGE
-  $ talky generate TYPE
+  $ talky generate TYPE NAME
 
 ARGUMENTS
   TYPE  (handler|router|service) Generate file type
+  NAME  Generate files name
 
 OPTIONS
   -D, --dry-run
+  -P, --path=path           [default: ./src] generate file path
+  -S, --ssml=(tsx|default)  SSML markup type
+  -T, --no-test             Ignore default test code
   -d, --debug
-  -h, --help       show CLI help
-  -n, --name=name  name of the generated file
-  -p, --path=path  [default: ./] generate file path
+  -h, --help                show CLI help
 
 ALIASES
   $ talky g
@@ -75,36 +130,4 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
 
-## `talky new [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ talky new [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/new.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.0.0/src/commands/new.ts)_
-
-## `talky setup`
-
-Setup project (update package.json / tsconfig.json)
-
-```
-USAGE
-  $ talky setup
-
-OPTIONS
-  -D, --dry-run
-  -d, --debug
-  -h, --help                show CLI help
-  -s, --ssml=(default|tsx)  [default: tsx] ssml markup style
-```
-
-_See code: [src/commands/setup.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.0.0/src/commands/setup.ts)_
 <!-- commandsstop -->
