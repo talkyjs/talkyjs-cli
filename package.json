@@ -47,6 +47,9 @@
       "@oclif/plugin-help"
     ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "ask-utils/talkyjs-cli",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
