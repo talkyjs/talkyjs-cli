@@ -12,7 +12,7 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
-    "@talkyjs/schematics": "^0.4.2",
+    "@talkyjs/schematics": "^0.4.3",
     "tslib": "^1"
   },
   "devDependencies": {
