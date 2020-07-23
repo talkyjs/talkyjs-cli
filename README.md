@@ -28,6 +28,7 @@ USAGE
 <!-- commands -->
 * [`talky generate TYPE NAME`](#talky-generate-type-name)
 * [`talky help [COMMAND]`](#talky-help-command)
+* [`talky init [FILE]`](#talky-init-file)
 * [`talky new`](#talky-new)
 
 ## `talky generate TYPE NAME`
@@ -95,6 +96,22 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
+
+## `talky init [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ talky init [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/init.ts](https://github.com/ask-utils/talkyjs-cli/blob/v0.2.2/src/commands/init.ts)_
 
 ## `talky new`
 
