@@ -1,6 +1,6 @@
 {
   "name": "@talkyjs/cli",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "author": "Hidetaka Okamoto",
   "bin": {
     "talky": "./bin/run",
