@@ -205,10 +205,10 @@
     "@angular-devkit/core" "9.1.9"
     "@angular-devkit/schematics" "9.1.9"
 
-"@talkyjs/schematics@1":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@talkyjs/schematics/-/schematics-1.0.2.tgz#61738c50bb08ae71b6ef8704bf29515d5f2b0f3d"
-  integrity sha512-Zf0s6xxD4L2aWWVDKcq3/fMgBiqvN3Uk71oXHVpHBEjHt7Fu2B23Y+e0UjYh9j9V3AsHiO8kAU2P38Dp7NdMxg==
+"@talkyjs/schematics@2":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@talkyjs/schematics/-/schematics-2.0.1.tgz#09d729b38b5086b23a203821d5d406f9f099c53a"
+  integrity sha512-HCKM57QtY/wxYlLWn0Q+P4Csa19UP87xDSJwUCVTCMLG9verQdUiYFeJl9uY99huTYKYm2TkHxL7CvzHbc7pgQ==
   dependencies:
     "@angular-devkit/core" "^9.1.9"
     "@angular-devkit/schematics" "^9.1.9"
