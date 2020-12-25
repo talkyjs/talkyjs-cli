@@ -5,11 +5,11 @@ import { CommandWithSchematics } from '../share/schematics/Command'
  * yarn schematics .:init --path=./tmp --dry-run=false  --ssml=tsx --database=s3 --test=true
  */
 export default class New extends CommandWithSchematics {
-  static description = 'Create a new Alexa app'
+  static description = 'Setup a new Alexa app'
   static examples = [
-    "For ask-sdk user\n $ talky new -C handler -S default\n",
-    "With S3 adapter\n $ talky new -B s3\n",
-    "Without test code\n $ talky new --no-test\n",
+    "For ask-sdk user\n $ talky setup -C handler -S default\n",
+    "With S3 adapter\n $ talky setup -B s3\n",
+    "Without test code\n $ talky setup --no-test\n",
   ]
 
   static flags = {
