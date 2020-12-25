@@ -17,7 +17,7 @@ $ npm install -g @talkyjs/cli
 $ talky COMMAND
 running command...
 $ talky (-v|--version|version)
-@talkyjs/cli/1.2.0 darwin-x64 node-v12.14.1
+@talkyjs/cli/2.0.0 darwin-x64 node-v12.14.1
 $ talky --help [COMMAND]
 USAGE
   $ talky COMMAND
@@ -29,7 +29,7 @@ USAGE
 * [`talky generate TYPE NAME`](#talky-generate-type-name)
 * [`talky help [COMMAND]`](#talky-help-command)
 * [`talky init`](#talky-init)
-* [`talky new`](#talky-new)
+* [`talky setup`](#talky-setup)
 
 ## `talky generate TYPE NAME`
 
@@ -78,7 +78,7 @@ EXAMPLES
     $ talky g service --no-test
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/ask-utils/talkyjs-cli/blob/v1.2.0/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/ask-utils/talkyjs-cli/blob/v2.0.0/src/commands/generate.ts)_
 
 ## `talky help [COMMAND]`
 
@@ -111,15 +111,15 @@ OPTIONS
   --debug                Enables the ASK CLI to show debug messages in the output of the command
 ```
 
-_See code: [src/commands/init.ts](https://github.com/ask-utils/talkyjs-cli/blob/v1.2.0/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/ask-utils/talkyjs-cli/blob/v2.0.0/src/commands/init.ts)_
 
-## `talky new`
+## `talky setup`
 
-Create a new Alexa app
+Setup a new Alexa app
 
 ```
 USAGE
-  $ talky new
+  $ talky setup
 
 OPTIONS
   -B, --database=(none|s3|dynamodb)  [default: none] Skill database type
@@ -133,14 +133,14 @@ OPTIONS
 
 EXAMPLES
   For ask-sdk user
-    $ talky new -C handler -S default
+    $ talky setup -C handler -S default
 
   With S3 adapter
-    $ talky new -B s3
+    $ talky setup -B s3
 
   Without test code
-    $ talky new --no-test
+    $ talky setup --no-test
 ```
 
-_See code: [src/commands/new.ts](https://github.com/ask-utils/talkyjs-cli/blob/v1.2.0/src/commands/new.ts)_
+_See code: [src/commands/setup.ts](https://github.com/ask-utils/talkyjs-cli/blob/v2.0.0/src/commands/setup.ts)_
 <!-- commandsstop -->
