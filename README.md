@@ -17,7 +17,7 @@ $ npm install -g @talkyjs/cli
 $ talky COMMAND
 running command...
 $ talky (-v|--version|version)
-@talkyjs/cli/2.0.0 darwin-x64 node-v12.14.1
+@talkyjs/cli/2.0.1 darwin-x64 node-v12.14.1
 $ talky --help [COMMAND]
 USAGE
   $ talky COMMAND
@@ -78,7 +78,7 @@ EXAMPLES
     $ talky g service --no-test
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/ask-utils/talkyjs-cli/blob/v2.0.0/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/talkyjs/talkyjs-cli/blob/v2.0.1/src/commands/generate.ts)_
 
 ## `talky help [COMMAND]`
 
@@ -111,7 +111,7 @@ OPTIONS
   --debug                Enables the ASK CLI to show debug messages in the output of the command
 ```
 
-_See code: [src/commands/init.ts](https://github.com/ask-utils/talkyjs-cli/blob/v2.0.0/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/talkyjs/talkyjs-cli/blob/v2.0.1/src/commands/init.ts)_
 
 ## `talky setup`
 
@@ -142,5 +142,5 @@ EXAMPLES
     $ talky setup --no-test
 ```
 
-_See code: [src/commands/setup.ts](https://github.com/ask-utils/talkyjs-cli/blob/v2.0.0/src/commands/setup.ts)_
+_See code: [src/commands/setup.ts](https://github.com/talkyjs/talkyjs-cli/blob/v2.0.1/src/commands/setup.ts)_
 <!-- commandsstop -->

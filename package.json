@@ -1,6 +1,6 @@
 {
   "name": "@talkyjs/cli",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Talkyjs Teams",
   "bin": {
     "talky": "./bin/run",
@@ -36,7 +36,10 @@
   ],
   "homepage": "https://github.com/talkyjs/talkyjs-cli",
   "keywords": [
-    "talkyjs", "cli", "alexa", "skill"
+    "talkyjs",
+    "cli",
+    "alexa",
+    "skill"
   ],
   "license": "MIT",
   "main": "lib/index.js",
