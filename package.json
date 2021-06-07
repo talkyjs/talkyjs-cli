@@ -20,7 +20,7 @@
     "@types/node": "10.17.50",
     "eslint": "5.16.0",
     "eslint-config-oclif": "3.1.0",
-    "eslint-config-oclif-typescript": "0.1.0",
+    "eslint-config-oclif-typescript": "0.2.0",
     "globby": "10.0.2",
     "ts-node": "8.10.2",
     "typescript": "3.9.7"
