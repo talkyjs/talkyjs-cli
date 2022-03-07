@@ -16,7 +16,7 @@
     "tslib": "^1"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "1.26.0",
+    "@oclif/dev-cli": "1.26.10",
     "@types/node": "10.17.50",
     "eslint": "5.16.0",
     "eslint-config-oclif": "3.1.0",
